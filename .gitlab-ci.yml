@@ -1,0 +1,21 @@
+include:
+  - project: 'Bigouden/gitlab-ci-templates'
+    file: '.gitlab-ci-docker.yml'
+
+stages:
+  - Quality
+  - Build
+  - Test
+  - Inspect
+  - Release
+
+Syntax-check:
+  stage: Test
+  image: python:3
+  before_script:
+    - pip install -r requirements.txt
+    - pip install pyflakes
+  script:
+    - pyflakes collector.py
+
+
