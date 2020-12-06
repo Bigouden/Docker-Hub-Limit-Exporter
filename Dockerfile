@@ -1,7 +1,7 @@
 FROM python:3
 LABEL maintainer="Thomas GUIRRIEC <thomas@guirriec.fr>"
-ADD . /src
-RUN pip install -r /src/requirements.txt
+COPY . /src
+RUN pip install --no-cache-dir  -r /src/requirements.txt
 
 WORKDIR /src
 ENV PYTHONPATH '/src/'
