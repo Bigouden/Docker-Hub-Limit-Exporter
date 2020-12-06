@@ -9,7 +9,7 @@ stages:
   - Inspect
   - Release
 
-Syntax-check:
+Syntax:
   stage: Test
   image: python:3
   before_script:
@@ -17,5 +17,3 @@ Syntax-check:
     - pip install pyflakes
   script:
     - pyflakes collector.py
-
-
