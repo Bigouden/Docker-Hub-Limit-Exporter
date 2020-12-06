@@ -1,2 +1,6 @@
+certifi
+chardet
+idna
 requests
 prometheus_client
+urllib3
